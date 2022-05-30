@@ -1,0 +1,78 @@
+<style>
+     @font-face { font-family: Arcade; src: url({{ url_for('static',filename='fonts/arcade.regular.ttf') }}); } 
+</style>
+<link href={{ url_for('static',filename='css/pojoaque.min.css') }} rel="stylesheet">
+<link href={{ url_for('static',filename='css/style.scss') }} rel="stylesheet">
+
+<script type="text/javascript" src={{ url_for('static',filename='js/highlight.min.js') }}></script>
+<script type="text/javascript" src={{ url_for('static',filename='js/yul.min.js') }}></script>
+<script type="text/javascript" src={{ url_for('static',filename='js/solidity.min.js') }}></script>
+
+<script type="text/javascript" src={{ url_for('static',filename='js/jquery-3.6.0.min.js') }}></script>
+
+<html>
+    <head>
+        <!-- Some basic meta info -->
+        <title>Smarthacker</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Link to the socket.io info -->
+        <script type="text/javascript" src={{ url_for('static',filename='js/socket.io.min.js') }}></script>
+
+        <!-- Script to handle socket.io -->
+        <script>
+            var socket;            
+            $(document).ready(function() {
+                // The http vs. https is important. Use http for localhost!
+                socket = io.connect('https://' + document.domain + ':' + location.port);
+
+                document.getElementById("check_button").onclick = function() {
+                    // Emit a message to the 'send_message' socket
+                    socket.emit('check_solved');
+                }
+
+                // Message recieved from server
+                socket.on('flag_check', function(data) {
+                    var text = data['text'];
+                    document.getElementById("response").innerHTML = text+"\n";   
+                });
+            });
+        </script>
+    </head>
+
+<body>   
+    
+    <div class="center textcenter">
+        <h1>{{ title }}</h1>
+    </div>
+    <div class="center textcenter">
+        <h2> Objective: </h2>
+        <h3>{{ objective }} </h3>
+    </div>
+    <div class="center">
+        <h2 class="textcenter">Source:</h2>
+        <pre><code>{{ sourcecode }}</code></pre>
+    </div>
+    <div class="center">
+        <h2 class="textcenter">ABI:</h2>
+        <pre><code>{{ abi }}</code></pre>
+    </div>
+    <div class="center textcenter">
+        <h2>Contract Address:</h2>
+        <a href="https://ropsten.etherscan.io/address/{{ address }}" target="_blank" rel="noopener noreferrer">{{ address }}</a>
+    </div class="center">
+
+        <div  class="center textcenter">
+            <button id="check_button" class="hackbutton" style=>Check Solved</button>
+            <br>
+            <h3 id="response"></h3>
+    </div> 
+
+    
+
+</body>
+<script type="text/javascript">
+    hljs.highlightAll();
+</script>
+</html>

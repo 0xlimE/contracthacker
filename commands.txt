@@ -1,0 +1,19 @@
+add own node as network
+brownie networks add Ethereum ropsten-own-node host=http://127.0.0.1:8545 chainid=100 explorer=https://api-ropsten.etherscan.io/api
+
+ssh forward 
+ssh -L 127.0.0.1:8545:127.0.0.1:8545 -i ethnode  ubuntu@IP
+
+start node on remote vps
+nohup geth  --ropsten --syncmode "snap" --http &
+
+
+Python3 get remote smart contract with source published from etherscan, then call a method
+c = Contract.from_explorer("0x2DB5FCedb33819A388D60B04d5Df8A6A3b1C1f02")
+dir(c)
+c.callme({'from':accounts[0]}) //last argument has to be sending account
+
+
+
+Deploying contract with funds requires 'value' in dict.
+t = StealFromMe.deploy({'from':accounts[0],'value':'1 ether'})

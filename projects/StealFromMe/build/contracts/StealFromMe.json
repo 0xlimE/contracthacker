@@ -1,0 +1,1034 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "steal",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/StealFromMe.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/StealFromMe.sol",
+    "exportedSymbols": {
+      "StealFromMe": [
+        29
+      ]
+    },
+    "id": 30,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 29,
+        "linearizedBaseContracts": [
+          29
+        ],
+        "name": "StealFromMe",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "mutability": "mutable",
+            "name": "_owner",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 29,
+            "src": "54:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "54:7:0",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 11,
+              "nodeType": "Block",
+              "src": "110:36:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 9,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6,
+                      "name": "_owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "120:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 7,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -15,
+                        "src": "129:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 8,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "129:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "120:19:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 10,
+                  "nodeType": "ExpressionStatement",
+                  "src": "120:19:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 12,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 4,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "93:2:0"
+            },
+            "returnParameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "110:0:0"
+            },
+            "scope": 29,
+            "src": "82:64:0",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 27,
+              "nodeType": "Block",
+              "src": "184:59:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 22,
+                              "name": "this",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -28,
+                              "src": "222:4:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_StealFromMe_$29",
+                                "typeString": "contract StealFromMe"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_StealFromMe_$29",
+                                "typeString": "contract StealFromMe"
+                              }
+                            ],
+                            "id": 21,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "214:7:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 20,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "214:7:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": null,
+                                "typeString": null
+                              }
+                            }
+                          },
+                          "id": 23,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "214:13:0",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "id": 24,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "balance",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "214:21:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 15,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "194:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 18,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "194:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "194:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 25,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "194:42:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 26,
+                  "nodeType": "ExpressionStatement",
+                  "src": "194:42:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "cf7a8965",
+            "id": 28,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "steal",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "166:2:0"
+            },
+            "returnParameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "184:0:0"
+            },
+            "scope": 29,
+            "src": "152:91:0",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 30,
+        "src": "27:218:0"
+      }
+    ],
+    "src": "0:245:0"
+  },
+  "bytecode": "6080604052600080546001600160a01b03191633179055608d806100246000396000f3fe608060405260043610601c5760003560e01c8063cf7a8965146021575b600080fd5b60276029565b005b60405133904780156108fc02916000818181858888f193505050501580156054573d6000803e3d6000fd5b5056fea264697066735822122089f7792d24949381396a5261c88843edd7baa53ee9863363547d53b2ced652c764736f6c634300060c0033",
+  "bytecodeSha1": "9d3d42d1b1f9f6ba5703d348f54c7a9756d346e7",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "StealFromMe",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {
+        "StealFromMe.steal": {
+          "0": [
+            194,
+            236
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "608060405260043610601c5760003560e01c8063cf7a8965146021575b600080fd5b60276029565b005b60405133904780156108fc02916000818181858888f193505050501580156054573d6000803e3d6000fd5b5056fea264697066735822122089f7792d24949381396a5261c88843edd7baa53ee9863363547d53b2ced652c764736f6c634300060c0033",
+  "deployedSourceMap": "27:218:0:-:0;;;;;;;;;;;;;;;;;;;;;152:91;;;:::i;:::-;;;194:42;;:10;;214:21;194:42;;;;;;;;;214:21;194:10;:42;;;;;;;;;;;;;;;;;;;;;152:91::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    27,
+    245
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH1 0x1C JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xCF7A8965 EQ PUSH1 0x21 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x27 PUSH1 0x29 JUMP JUMPDEST STOP JUMPDEST PUSH1 0x40 MLOAD CALLER SWAP1 SELFBALANCE DUP1 ISZERO PUSH2 0x8FC MUL SWAP2 PUSH1 0x0 DUP2 DUP2 DUP2 DUP6 DUP9 DUP9 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH1 0x54 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP10 0xF7 PUSH26 0x2D24949381396A5261C88843EDD7BAA53EE9863363547D53B2CE 0xD6 MSTORE 0xC7 PUSH5 0x736F6C6343 STOP MOD 0xC STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1C"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "SHR",
+      "path": "0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xCF7A8965"
+    },
+    "24": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x21"
+    },
+    "27": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "32": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        27,
+        245
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "33": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        152,
+        243
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "34": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        152,
+        243
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x27"
+    },
+    "36": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        152,
+        243
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x29"
+    },
+    "38": {
+      "fn": "StealFromMe.steal",
+      "jump": "i",
+      "offset": [
+        152,
+        243
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "39": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        152,
+        243
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "40": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        152,
+        243
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "41": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        152,
+        243
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "42": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x40"
+    },
+    "44": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "45": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        204
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "46": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        204
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "47": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        214,
+        235
+      ],
+      "op": "SELFBALANCE",
+      "path": "0"
+    },
+    "48": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "49": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "50": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x8FC"
+    },
+    "53": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "54": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "55": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "57": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "58": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "59": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "60": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        214,
+        235
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "61": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        204
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "62": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "63": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "64": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "65": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "66": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "67": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "68": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "69": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "70": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "71": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "72": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x54"
+    },
+    "74": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "75": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "76": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "78": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "79": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "0"
+    },
+    "80": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "81": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "83": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "84": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "85": {
+      "fn": "StealFromMe.steal",
+      "offset": [
+        194,
+        236
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "86": {
+      "fn": "StealFromMe.steal",
+      "jump": "o",
+      "offset": [
+        152,
+        243
+      ],
+      "op": "JUMP",
+      "path": "0"
+    }
+  },
+  "sha1": "0388cf402806741ffb9798f23c7107cb56073114",
+  "source": "pragma solidity ^0.6.0;\n\n \ncontract StealFromMe {\n    address private _owner;\n    constructor() public payable{\n        _owner = msg.sender;\n    }\n\n    function steal() public payable {\n        msg.sender.transfer(address(this).balance);\n    }\n}",
+  "sourceMap": "27:218:0:-:0;;;120:6;:19;;-1:-1:-1;;;;;;120:19:0;129:10;120:19;;;27:218;;;;;;",
+  "sourcePath": "contracts/StealFromMe.sol",
+  "type": "contract"
+}

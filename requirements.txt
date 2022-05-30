@@ -1,0 +1,3 @@
+eth-brownie
+flask
+flask-socketio

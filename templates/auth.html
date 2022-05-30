@@ -1,0 +1,30 @@
+<style>
+    @font-face { font-family: Arcade; src: url({{ url_for('static',filename='fonts/arcade.regular.ttf') }}); } 
+</style>
+<link href={{ url_for('static',filename='css/style.scss') }} rel="stylesheet">
+
+
+<html>
+   <head>
+       <!-- Some basic meta info -->
+       <title>ContractHacker</title>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+   </head>
+
+<body>   
+   
+   <div class="center textcenter">
+       <h2>Please enter your event code.</h2>
+   </div>
+   <div class="center textcenter">
+    <form action="/auth" method="post">
+        <input type="text" id="eventcode" name="eventcode"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+   </div>
+
+   
+
+</body>
+</html>

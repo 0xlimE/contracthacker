@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  bank:
+    build: .
+    ports:
+    - "8000:8000"
+    environment:
+      - port=8000
+      - eventcode=134191
+      - contractname=Bank
+
+  charity:
+    build: .
+    ports:
+    - "8001:8001"
+    environment:
+      - port=8001
+      - eventcode=134191
+      - contractname=Charity
+
+  stealfromme:
+    build: .
+    ports:
+    - "8002:8002"
+    environment:
+      - port=8002
+      - eventcode=413322
+      - contractname=StealFromMe

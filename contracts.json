@@ -1,0 +1,23 @@
+{
+    "StealFromMe":{
+        "name":"StealFromMe",
+        "source":"StealFromMe/contracts/StealFromMe.sol",
+        "objective":{"short":"emptycontract","long":"Empty the contract for funds."},
+        "funding":"0.01 ether",
+        "flag":"DDC{ez_pz_st0l3n_3th3r_n02_s0lv3_th3_h4rd_0n3}"
+    },
+    "Bank":{
+        "name":"Bank",
+        "source":"Bank/contracts/Bank.sol",
+        "objective":{"short":"emptycontract","long":"Empty the contract for funds."},
+        "funding":"0.1 ether",
+        "flag":"TDCNET{B4nk_b00_d40_m3d_d1g_m1N_v3N}"
+    },
+    "Charity":{
+        "name":"Charity",
+        "source":"Charity/contracts/Charity.sol",
+        "objective":{"short":"emptycontract","long":"Empty the contract for funds."},
+        "funding":"0.1 ether",
+        "flag":"DDC{ch4r1ty_funD5_unD3rFl0wN}"
+    }
+}
